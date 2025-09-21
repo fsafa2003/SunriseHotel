@@ -1,0 +1,214 @@
+<!-- File: home.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sunrise Hotel — Home</title>
+  <meta name="description" content="Sunrise Hotel — comfortable stays, great location, and excellent service." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="home.html" class="logo">
+        <img src="images/logo.png" alt="Sunrise Hotel logo" width="80" height="80">
+        <span class="hotel-name">Sunrise Hotel</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="rooms-facilities.html">Rooms &amp; Facilities</a></li>
+          <li><a href="dining-services.html">Dining &amp; Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" role="main">
+    <!-- Hero / Banner -->
+    <section class="hero" aria-label="Welcome banner">
+      <div class="hero-overlay">
+        <h1>Wake Up to a Brighter Stay</h1>
+        <p class="slogan">Comfort • Convenience • Care — Your home away from home</p>
+        <a href="contact.html#inquiry" class="btn btn-primary">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Featured Rooms -->
+    <section class="featured-rooms" aria-labelledby="rooms-heading">
+      <div class="container">
+        <h2 id="rooms-heading">Featured Rooms & Suites</h2>
+
+        <div class="grid rooms-grid">
+          <article class="room-card">
+            <img src="images/dl.jpeg" alt="Deluxe Room at Sunrise Hotel">
+            <h3>Deluxe Room</h3>
+            <p class="desc">Comfortable room with king-size bed, free Wi-Fi and city view.</p>
+            <p class="price">Price: $90 - $100 / night</p>
+            <a class="btn" href="contact.html#inquiry">Book Now</a>
+          </article>
+
+          <article class="room-card">
+            <img src="images/dl.jpg" alt="Suite at Sunrise Hotel">
+            <h3>Executive Suite</h3>
+            <p class="desc">Spacious suite with living area, minibar and complimentary breakfast.</p>
+            <p class="price">Price: $150 - $200 / night</p>
+            <a class="btn" href="contact.html#inquiry">Book Now</a>
+          </article>
+
+          <article class="room-card">
+            <img src="images/family.jpg" alt="Family Room at Sunrise Hotel">
+            <h3>Family Room</h3>
+            <p class="desc">Two double beds and extra space for families.</p>
+            <p class="price">Price: $120 - $160 / night</p>
+            <a class="btn" href="contact.html#inquiry">Book Now</a>
+          </article>
+
+          <article class="room-card">
+            <img src="images/standard.jpg" alt="Standard Room at Sunrise Hotel">
+            <h3>Standard Room</h3>
+            <p class="desc">Affordable and cozy, perfect for solo travelers.</p>
+            <p class="price">Price: $60 - $80 / night</p>
+            <a class="btn" href="contact.html#inquiry">Book Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers" aria-labelledby="offers-heading">
+      <div class="container">
+        <h2 id="offers-heading">Special Offers / Promotions</h2>
+        <div class="grid offers-grid">
+          <article class="offer-card">
+            <img src="images/offer-summer.jpg" alt="Summer Escape offer image">
+            <h3>Summer Escape — 20% Off</h3>
+            <p>Book a 3-night stay and get 20% off on room rates. Valid till end of the month.</p>
+            <a class="btn" href="contact.html#inquiry">Redeem Offer</a>
+          </article>
+
+          <article class="offer-card">
+            <img src="images/offer-breakfast.jpg" alt="Complimentary breakfast offer">
+            <h3>Free Breakfast</h3>
+            <p>Complimentary breakfast for all bookings made during weekdays.</p>
+            <a class="btn" href="contact.html#inquiry">Book &amp; Save</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (shared across pages) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <address>
+          Sunrise Hotel<br>
+          123 Beach Road, Colombo<br>
+          Phone: +94 11 234 5678<br>
+          Email: <a href="mailto:info@sunrisehotel.example">info@sunrisehotel.example</a>
+        </address>
+
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="Facebook">Facebook</a> |
+          <a href="#" aria-label="Instagram">Instagram</a> |
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+
+      <div class="footer-forms">
+        <h3>Contact Us</h3>
+        <form id="footerContactForm" class="footer-form" action="#" method="post" novalidate>
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" required>
+
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" required>
+
+          <label for="f-subject">Subject</label>
+          <input id="f-subject" name="subject" type="text">
+
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" rows="3" required></textarea>
+
+          <button type="submit" class="btn">Send</button>
+          <div id="footerContactMsg" role="status" aria-live="polite"></div>
+        </form>
+
+        <h3>Subscribe to Newsletter</h3>
+        <form id="subscribeForm" class="subscribe-form" action="#" method="post" novalidate>
+          <label for="subscribeEmail" class="sr-only">Email for newsletter</label>
+          <input id="subscribeEmail" name="subscribeEmail" type="email" placeholder="Your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+          <div id="subscribeMsg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Sunrise Hotel. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Small JS needed for sticky header fallback, forms -->
+  <script>
+    // set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Sticky nav shadow on scroll (fallback / visual cue)
+    (function(){
+      const header = document.querySelector('.site-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      });
+    })();
+
+    // Footer contact form simple client-side handler
+    (function(){
+      const form = document.getElementById('footerContactForm');
+      const msg = document.getElementById('footerContactMsg');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // basic validation
+        const name = form.querySelector('[name="name"]').value.trim();
+        const email = form.querySelector('[name="email"]').value.trim();
+        const message = form.querySelector('[name="message"]').value.trim();
+        if (!name || !email || !message) {
+          msg.textContent = 'Please fill in name, email and message.';
+          msg.style.color = 'crimson';
+          return;
+        }
+        // Here you would send to server; for now show success
+        msg.textContent = 'Thank you — message sent!';
+        msg.style.color = 'green';
+        form.reset();
+      });
+    })();
+
+    // Subscribe form
+    (function(){
+      const form = document.getElementById('subscribeForm');
+      const msg = document.getElementById('subscribeMsg');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = form.querySelector('[name="subscribeEmail"]').value.trim();
+        if (!email) {
+          msg.textContent = 'Please enter a valid email.';
+          msg.style.color = 'crimson';
+          return;
+        }
+        msg.textContent = 'Subscribed! Check your email for confirmation.';
+        msg.style.color = 'green';
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
