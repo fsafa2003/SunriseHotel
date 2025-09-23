@@ -1,0 +1,184 @@
+<!-- File: dining-services.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sunrise Hotel — Dining & Services</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="home.html" class="logo">
+        <img src="images/logo.png" alt="Sunrise Hotel logo" width="80" height="80">
+        <span class="hotel-name">Sunrise Hotel</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="rooms-facilities.html">Rooms &amp; Facilities</a></li>
+          <li><a href="dining-services.html" class="active">Dining &amp; Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" role="main">
+    <section class="dining" aria-labelledby="dining-heading">
+      <div class="container">
+        <h1 id="dining-heading">Dining at Sunrise</h1>
+
+        <article class="venue">
+          <img src="images/restaurant.jpg" alt="Sunrise Hotel Restaurant">
+          <h2>Sunrise Restaurant</h2>
+          <p>Our main restaurant serves a buffet breakfast and international dinner menu using fresh local ingredients.</p>
+        </article>
+
+        <article class="venue">
+          <img src="images/cafe.jpg" alt="Sunrise Café">
+          <h2>Sunrise Café</h2>
+          <p>Relax with specialty coffees, light bites and pastries throughout the day.</p>
+        </article>
+
+        <article class="venue">
+          <img src="images/bar.jpg" alt="Sunrise Bar">
+          <h2>Sunrise Bar</h2>
+          <p>Evening cocktails and mocktails in a cozy setting with live music on weekends.</p>
+        </article>
+
+        <h2>Menu Highlights</h2>
+        <div class="grid menu-grid">
+          <div class="menu-item">
+            <img src="images/menu1.jpg" alt="Grilled Seafood Platter">
+            <h3>Grilled Seafood Platter</h3>
+            <p>Local catch, grilled to perfection. <strong>Price:</strong> $22</p>
+          </div>
+
+          <div class="menu-item">
+            <img src="images/menu2.jpg" alt="Veggie Curry">
+            <h3>Signature Veg Curry</h3>
+            <p>Traditional spices with seasonal vegetables. <strong>Price:</strong> $12</p>
+          </div>
+
+          <div class="menu-item">
+            <img src="images/menu3.jpg" alt="Chocolate Lava Cake">
+            <h3>Chocolate Lava Cake</h3>
+            <p>Decadent dessert, served warm with ice cream. <strong>Price:</strong> $8</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading">Other Services</h2>
+        <ul class="services-list">
+          <li><strong>Airport Shuttle:</strong> Pickup & drop-off available (charges apply).</li>
+          <li><strong>Room Service:</strong> 24-hour room service menu.</li>
+          <li><strong>Event Hosting:</strong> Wedding & corporate event planning and catering.</li>
+          <li><strong>Laundry & Dry Cleaning:</strong> Next-day service available.</li>
+          <li><strong>Concierge:</strong> Tours, tickets and local recommendations.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as other pages) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <address>
+          Sunrise Hotel<br>
+          123 Beach Road, Colombo<br>
+          Phone: +94 11 234 5678<br>
+          Email: <a href="mailto:info@sunrisehotel.example">info@sunrisehotel.example</a>
+        </address>
+
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="Facebook">Facebook</a> |
+          <a href="#" aria-label="Instagram">Instagram</a> |
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+
+      <div class="footer-forms">
+        <h3>Contact Us</h3>
+        <form id="footerContactForm3" class="footer-form" action="#" method="post" novalidate>
+          <label for="f3-name">Name</label>
+          <input id="f3-name" name="name" type="text" required>
+
+          <label for="f3-email">Email</label>
+          <input id="f3-email" name="email" type="email" required>
+
+          <label for="f3-subject">Subject</label>
+          <input id="f3-subject" name="subject" type="text">
+
+          <label for="f3-message">Message</label>
+          <textarea id="f3-message" name="message" rows="3" required></textarea>
+
+          <button type="submit" class="btn">Send</button>
+          <div id="footerContactMsg3" role="status" aria-live="polite"></div>
+        </form>
+
+        <h3>Subscribe to Newsletter</h3>
+        <form id="subscribeForm3" class="subscribe-form" action="#" method="post" novalidate>
+          <label for="subscribeEmail3" class="sr-only">Email for newsletter</label>
+          <input id="subscribeEmail3" name="subscribeEmail" type="email" placeholder="Your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+          <div id="subscribeMsg3" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year3"></span> Sunrise Hotel. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+
+    // Footer forms: simple handlers
+    (function(){
+      const form = document.getElementById('footerContactForm3');
+      const msg = document.getElementById('footerContactMsg3');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = form.querySelector('[name="name"]').value.trim();
+        const email = form.querySelector('[name="email"]').value.trim();
+        const message = form.querySelector('[name="message"]').value.trim();
+        if (!name || !email || !message) {
+          msg.textContent = 'Please fill in name, email and message.';
+          msg.style.color = 'crimson';
+          return;
+        }
+        msg.textContent = 'Thank you — message sent!';
+        msg.style.color = 'green';
+        form.reset();
+      });
+    })();
+
+    (function(){
+      const form = document.getElementById('subscribeForm3');
+      const msg = document.getElementById('subscribeMsg3');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = form.querySelector('[name="subscribeEmail"]').value.trim();
+        if (!email) {
+          msg.textContent = 'Please enter a valid email.';
+          msg.style.color = 'crimson';
+          return;
+        }
+        msg.textContent = 'Subscribed! Check your email for confirmation.';
+        msg.style.color = 'green';
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
