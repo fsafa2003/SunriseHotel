@@ -7,7 +7,16 @@ html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Rob
 .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
 
 /* Header / nav */
-.site-header { background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 9999; }
+.site-header { 
+  background: #fff; 
+  border-bottom: 1px solid #eee; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 9999; 
+}
+
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 24px; }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
 .hotel-name { font-weight: 700; font-size: 1.25rem; }
@@ -35,8 +44,30 @@ html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Rob
 .facilities-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 
 /* Cards */
-.room-card, .offer-card, .menu-item, .facility { border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fff; }
-.room-card img, .menu-item img, .facility img, .offer-card img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; }
+.room-card, .menu-item, .facility { border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fff; }
+.offer-card {border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fff; }
+.room-card img, .menu-item img, .facility img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; }
+.offer-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.4s ease-in-out; /* smooth animation */
+}
+
+.offer-card img:hover {
+  transform: scale(1.05); /* zoom in slightly */
+  cursor: pointer; /* optional: show pointer on hover */
+}
+.room-card img{
+   transition: transform 0.4s ease-in-out;
+}
+
+.room-card img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 
 /* Testimonials */
 .testimonial-card { display: flex; gap: 16px; padding: 12px; border-bottom: 1px solid #eee; align-items: flex-start; }
