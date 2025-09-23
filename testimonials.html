@@ -1,0 +1,194 @@
+<!-- File: testimonials.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sunrise Hotel — Testimonials</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="home.html" class="logo">
+        <img src="images/logo.png" alt="Sunrise Hotel logo" width="80" height="80">
+        <span class="hotel-name">Sunrise Hotel</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="rooms-facilities.html">Rooms &amp; Facilities</a></li>
+          <li><a href="dining-services.html">Dining &amp; Services</a></li>
+          <li><a href="testimonials.html" class="active">Testimonials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" role="main">
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <h1 id="testimonials-heading">Guest Testimonials</h1>
+
+        <!-- Testimonial 1 -->
+        <article class="testimonial-card">
+          <img src="images/testimonial1.jpg" alt="Photo of guest John Doe">
+          <div class="testimonial-body">
+            <h3>John Doe</h3>
+            <p class="date">Date: 2025-07-02</p>
+            <p class="review">"Fantastic stay — friendly staff, clean rooms and great location."</p>
+
+            <div class="media">
+              <video controls preload="none" width="320" height="180">
+                <source src="media/testimonial1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <audio controls preload="none">
+                <source src="media/testimonial1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <label>
+              <input type="checkbox" class="enjoyed-checkbox"> Did you enjoy your stay with us?
+            </label>
+          </div>
+        </article>
+
+        <!-- Testimonial 2 -->
+        <article class="testimonial-card">
+          <img src="images/testimonial2.jpg" alt="Photo of guest Jane Smith">
+          <div class="testimonial-body">
+            <h3>Jane Smith</h3>
+            <p class="date">Date: 2025-06-18</p>
+            <p class="review">"Lovely breakfast and super helpful staff. We'll return!"</p>
+
+            <div class="media">
+              <video controls preload="none" width="320" height="180">
+                <source src="media/testimonial2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <audio controls preload="none">
+                <source src="media/testimonial2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <label>
+              <input type="checkbox" class="enjoyed-checkbox"> Did you enjoy your stay with us?
+            </label>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as other pages) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <address>
+          Sunrise Hotel<br>
+          123 Beach Road, Colombo<br>
+          Phone: +94 11 234 5678<br>
+          Email: <a href="mailto:info@sunrisehotel.example">info@sunrisehotel.example</a>
+        </address>
+
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="Facebook">Facebook</a> |
+          <a href="#" aria-label="Instagram">Instagram</a> |
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+
+      <div class="footer-forms">
+        <h3>Contact Us</h3>
+        <form id="footerContactForm4" class="footer-form" action="#" method="post" novalidate>
+          <label for="f4-name">Name</label>
+          <input id="f4-name" name="name" type="text" required>
+
+          <label for="f4-email">Email</label>
+          <input id="f4-email" name="email" type="email" required>
+
+          <label for="f4-subject">Subject</label>
+          <input id="f4-subject" name="subject" type="text">
+
+          <label for="f4-message">Message</label>
+          <textarea id="f4-message" name="message" rows="3" required></textarea>
+
+          <button type="submit" class="btn">Send</button>
+          <div id="footerContactMsg4" role="status" aria-live="polite"></div>
+        </form>
+
+        <h3>Subscribe to Newsletter</h3>
+        <form id="subscribeForm4" class="subscribe-form" action="#" method="post" novalidate>
+          <label for="subscribeEmail4" class="sr-only">Email for newsletter</label>
+          <input id="subscribeEmail4" name="subscribeEmail" type="email" placeholder="Your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+          <div id="subscribeMsg4" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year4"></span> Sunrise Hotel. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year4').textContent = new Date().getFullYear();
+
+    // Checkbox behavior: show a quick message
+    document.querySelectorAll('.enjoyed-checkbox').forEach(chk => {
+      chk.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          alert('Thanks for your feedback!');
+        }
+      });
+    });
+
+    // Footer forms simple handlers
+    (function(){
+      const form = document.getElementById('footerContactForm4');
+      const msg = document.getElementById('footerContactMsg4');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = form.querySelector('[name="name"]').value.trim();
+        const email = form.querySelector('[name="email"]').value.trim();
+        const message = form.querySelector('[name="message"]').value.trim();
+        if (!name || !email || !message) {
+          msg.textContent = 'Please fill in name, email and message.';
+          msg.style.color = 'crimson';
+          return;
+        }
+        msg.textContent = 'Thank you — message sent!';
+        msg.style.color = 'green';
+        form.reset();
+      });
+    })();
+
+    (function(){
+      const form = document.getElementById('subscribeForm4');
+      const msg = document.getElementById('subscribeMsg4');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = form.querySelector('[name="subscribeEmail"]').value.trim();
+        if (!email) {
+          msg.textContent = 'Please enter a valid email.';
+          msg.style.color = 'crimson';
+          return;
+        }
+        msg.textContent = 'Subscribed! Check your email for confirmation.';
+        msg.style.color = 'green';
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
