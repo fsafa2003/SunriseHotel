@@ -44,9 +44,9 @@ html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Rob
 .facilities-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 
 /* Cards */
-.room-card, .menu-item, .facility { border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fff; }
+.room-card, .room-detail, .menu-item, .facility { border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fff; }
 .offer-card {border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fff; }
-.room-card img, .menu-item img, .facility img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; }
+.room-card img, .room-detail img, .menu-item img, .facility img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; }
 .offer-card img {
   width: 100%;
   height: auto;
