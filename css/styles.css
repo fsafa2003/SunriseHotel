@@ -22,7 +22,7 @@ html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Rob
 .hotel-name { font-weight: 700; font-size: 1.25rem; }
 .main-nav ul { list-style: none; display: flex; gap: 12px; align-items: center; }
 .main-nav a { display: inline-block; padding: 8px 12px; text-decoration: none; color: #333; border-radius: 6px; }
-.main-nav a.active, .main-nav a:hover { background: #f0f0f0; }
+.main-nav a.active, .main-nav a:hover { background: #ff8800cf; }
 
 /* small shadow when scrolled (JS toggles class) */
 .site-header.scrolled { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
